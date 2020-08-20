@@ -1,4 +1,4 @@
-# go-bin-vue_template
+# go-gin-vue_template
 
 - 目标一个go + gin + vue 脚手架
 ### todo 
