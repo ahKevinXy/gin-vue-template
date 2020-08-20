@@ -25,5 +25,5 @@
 out
 gen
 log/
-config/
+config/settings.prod.yml
 tmp
