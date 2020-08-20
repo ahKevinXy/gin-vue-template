@@ -26,4 +26,5 @@ out
 gen
 log/
 config/settings.prod.yml
+config/settings.dev.yml
 tmp
