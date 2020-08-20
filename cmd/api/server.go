@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"learn-go/database"
+	"learn-go/init/database"
 )
 
 var (
