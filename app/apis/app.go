@@ -1,4 +1,4 @@
-package app
+package apis
 
 import (
 	"github.com/gin-gonic/gin"

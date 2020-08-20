@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"learn-go/api/app"
+	"learn-go/app/apis"
 	"mime"
 )
 
@@ -33,7 +33,7 @@ func sysStaticFileRouter(r *gin.RouterGroup) {
 
 func sysNoCheckRoleRouter(r *gin.RouterGroup) {
 	v1 := r.Group("/")
-	v1.GET("/", app.GetName)
+	v1.GET("/", apis.GetName)
 	registerPublicRouter(v1)
 
 }
