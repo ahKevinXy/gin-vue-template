@@ -1,0 +1,1 @@
+# gobin_template
