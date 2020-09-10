@@ -3,10 +3,10 @@ package apis
 import (
 	"github.com/gin-gonic/gin"
 
-	logs "github.com/sirupsen/logrus"
+
 )
 
 func GetName(c *gin.Context) {
-	logs.Error("getName")
-	c.JSON(200, "")
+
+	c.JSON(200, "这是我的第一次启动")
 }

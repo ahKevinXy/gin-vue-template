@@ -15,6 +15,9 @@ var cfgDatabase *viper.Viper
 // 应用配置项
 var cfgApplication *viper.Viper
 
+//redis 配置
+var cfgRedis *viper.Viper
+
 //载入配置文件
 func Setup(path string) {
 	viper.SetConfigFile(path)
@@ -28,17 +31,22 @@ func Setup(path string) {
 	if err != nil {
 		log.Fatal(fmt.Sprintf("Parse config file fail: %s", err.Error()))
 	}
-
+	//初始化数据库
 	cfgDatabase = viper.Sub("database")
 	if cfgDatabase == nil {
 		panic("No found settings.database in the configuration")
 	}
 	DatabaseConfig = InitDatabase(cfgDatabase)
-
+	//初始化应用
 	cfgApplication = viper.Sub("application")
 	if cfgApplication == nil {
 		panic("No found settings.application in the configuration")
 	}
 	ApplicationConfig = InitApplication(cfgApplication)
 
+	//初始化redis
+	cfgRedis = viper.Sub("redis")
+	if cfgRedis == nil{
+		panic("No found settings.application in the configuration")
+	}
 }

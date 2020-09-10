@@ -9,8 +9,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:          "go-admin",
-	Short:        "go-admin",
+	Use:          "go-vue-template",
+	Short:        "go-vue-template",
 	SilenceUsage: true,
 	Long:         `go-admin`,
 	Args: func(cmd *cobra.Command, args []string) error {
